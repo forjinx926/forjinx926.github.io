@@ -138,11 +138,11 @@ var Diaspora = {
             })
             return
         }
-        var sourceSrc= $("#audio source").eq(0).attr('D:\hexo\themes\hexo-theme-diaspora\source\music')
-        if (sourceSrc == '' && p[0].src == ''){
+        var sourceSrc= $("#audio source").eq(0).attr('src')
+        if (sourceSrc == '' && p[0].src == 'src'){
             audiolist = $('#audio-list li');
             mp3 = audiolist.eq([Math.floor(Math.random() * audiolist.size())])
-            p[0].src = mp3.data('D:\hexo\themes\hexo-theme-diaspora\source\music')
+            p[0].src = mp3.data('src')
         }
 
         if (p.eq(0).data("autoplay") == true) {
@@ -156,7 +156,7 @@ var Diaspora = {
                 if (progress / 5 <= 1) {
                     p[0].volume = progress / 5;
                 }else {
-                    p[0].volume = 50;
+                    p[0].volume = 1;
                 }
             },
             'ended': function() {
