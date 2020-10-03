@@ -139,10 +139,10 @@ var Diaspora = {
             return
         }
         var sourceSrc= $("#audio source").eq(0).attr('src')
-        if (sourceSrc == '' && p[0].src == 'src'){
+        if (sourceSrc == '' && p[0].src == ''){
             audiolist = $('#audio-list li');
             mp3 = audiolist.eq([Math.floor(Math.random() * audiolist.size())])
-            p[0].src = mp3.data('src')
+            p[0].src = mp3.data('url')
         }
 
         if (p.eq(0).data("autoplay") == true) {
